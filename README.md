@@ -1,0 +1,1 @@
+# kde-battery-treshold-widget
