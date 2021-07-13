@@ -11,7 +11,7 @@ class ScriptLauncher : public QObject
 
 public:
     explicit ScriptLauncher(QObject *parent = 0);
-    Q_INVOKABLE void launchScript();
+    Q_INVOKABLE void launchScript(int value, string batteryName);
 
 private:
     QProcess *m_process;

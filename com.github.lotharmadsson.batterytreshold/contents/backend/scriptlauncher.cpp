@@ -1,4 +1,5 @@
 #include "scriptlauncher.h"
+#include <string>
 
 ScriptLauncher::ScriptLauncher(QObject *parent) :
     QObject(parent),
@@ -6,7 +7,11 @@ ScriptLauncher::ScriptLauncher(QObject *parent) :
 {
 }
 
-void ScriptLauncher::launchScript()
+void ScriptLauncher::launchScript(int value, string batteryName)
 {
-    m_process->start("sh script.sh");
+    std::string stringValue = std::to_string(value);
+    std::string script = "sh ../../scripts/bat.sh ";
+    std::string command = script + stringValue + " " + batteryName;
+
+    m_process->start(command);
 }

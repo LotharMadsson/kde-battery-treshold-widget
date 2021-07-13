@@ -33,7 +33,8 @@ RowLayout {
     Button
     {
         text: "Apply"
-        onClicked: scriptLauncher.launchScript()
+        //TODO change string
+        onClicked: scriptLauncher.launchScript(slider.value, string batname)
     }
 
 }
